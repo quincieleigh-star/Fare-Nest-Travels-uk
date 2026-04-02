@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels & Restaurants - Farenest Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-plane-departure"></i>
+            Farenest<span>Travels</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html" class="active">Hotels & Restaurants</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<a href="https://wa.me/44798515953" class="whatsapp-float" target="_blank">
+    <div class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</a>
+
+<section class="page-header">
+    <h1>Find Hotels & Restaurants Worldwide</h1>
+    <p>Search any location - powered by OpenStreetMap</p>
+</section>
+
+<section class="hotels-section">
+    <div class="container">
+        <div class="search-location">
+            <div class="form-group">
+                <label><i class="fas fa-map-marker-alt"></i> Search Location</label>
+                <input type="text" id="locationSearch" placeholder="Enter city, country, or address..." value="London, UK">
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-tag"></i> Place Type</label>
+                <select id="placeType">
+                    <option value="hotel">Hotels</option>
+                    <option value="restaurant">Restaurants</option>
+                    <option value="cafe">Cafes</option>
+                    <option value="bar">Bars & Pubs</option>
+                </select>
+            </div>
+            <button onclick="searchPlaces()" class="btn btn-primary">Search</button>
+        </div>
+
+        <div id="mapContainer" style="height: 500px; width: 100%; margin: 2rem 0; border-radius: 15px; overflow: hidden;"></div>
+
+        <div id="placesResults"></div>
+        <div id="loadingSpinner" style="text-align: center; display: none; padding: 2rem;">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+            <p>Searching for places...</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Farenest Travels</h3>
+            <p>Your trusted travel partner since 2019</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels & Restaurants</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@farenesttravels.com</p>
+            <p><i class="fab fa-whatsapp"></i> +44 798 515 953</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Farenest Travels. All rights reserved.</p>
+        <p>Powered by OpenStreetMap</p>
+    </div>
+</footer>
+
+<script src="airports.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
