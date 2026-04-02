@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farenest Travels - Your Global Travel Partner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-plane-departure"></i>
+            Farenest<span>Travels</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html">Hotels & Restaurants</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<a href="https://wa.me/44798515953" class="whatsapp-float" target="_blank">
+    <div class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</a>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Explore the World with <span>Farenest Travels</span></h1>
+        <p>Book flights to 12,000+ airports | 5 Years Excellence | 10,000+ Happy Travelers</p>
+        <a href="flights.html" class="btn">Book Your Flight</a>
+        <a href="hotels.html" class="btn btn-outline">Find Hotels</a>
+    </div>
+</section>
+
+<section class="quick-search">
+    <div class="container">
+        <h2>Quick Flight Search</h2>
+        <p>Search from 12,000+ airports worldwide</p>
+        <div class="search-box">
+            <input type="text" id="quickFrom" placeholder="From: City, Airport, or Code" autocomplete="off">
+            <div id="quickFromSuggestions" class="suggestions"></div>
+            <input type="text" id="quickTo" placeholder="To: City, Airport, or Code" autocomplete="off">
+            <div id="quickToSuggestions" class="suggestions"></div>
+            <input type="date" id="quickDate">
+            <button onclick="quickSearch()" class="btn">Search Flights</button>
+        </div>
+        <div id="quickResults"></div>
+    </div>
+</section>
+
+<section class="airline-partners">
+    <div class="container">
+        <h2 class="section-title">Our Airline Partners</h2>
+        <div class="airlines-grid" id="airlinesGrid"></div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose Farenest Travels?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>12,000+ Airports</h3>
+                <p>Complete coverage of all airports worldwide</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hotel"></i>
+                <h3>Hotels & Restaurants</h3>
+                <p>Find any hotel or restaurant with interactive maps</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Smart Flight Search</h3>
+                <p>Find nearest available flights to your date</p>
+            </div>
+            <div class="feature-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>Instant Booking</h3>
+                <p>Book directly via WhatsApp</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="destinations-preview">
+    <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="destinations-grid" id="destinationsGrid"></div>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="container">
+        <h2 class="section-title">Travel Inspiration</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400" alt="Plane">
+                <div class="gallery-overlay">
+                    <p>Luxury Flights</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="Air Hostess">
+                <div class="gallery-overlay">
+                    <p>Professional Crew</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Pilot">
+                <div class="gallery-overlay">
+                    <p>Expert Pilots</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400" alt="First Class">
+                <div class="gallery-overlay">
+                    <p>First Class Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3><i class="fas fa-plane-departure"></i> Farenest Travels</h3>
+            <p>Your trusted travel partner since 2019</p>
+            <p>✈️ 5 Years Excellence</p>
+            <p>⭐ 100% Positive Reviews</p>
+            <p>🌍 12,000+ Airports Worldwide</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels & Restaurants</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-envelope"></i> info@farenesttravels.com</p>
+            <p><i class="fab fa-whatsapp"></i> +44 798 515 953</p>
+            <p><i class="fas fa-phone"></i> +44 20 1234 5678</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Farenest Travels. All rights reserved. | Your Journey, Our Passion</p>
+    </div>
+</footer>
+
+<script src="airports.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
