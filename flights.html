@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights - Farenest Travels | Book Worldwide Flights</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-plane-departure"></i>
+            Farenest<span>Travels</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="flights.html" class="active">Flights</a></li>
+            <li><a href="hotels.html">Hotels & Restaurants</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<a href="https://wa.me/44798515953" class="whatsapp-float" target="_blank">
+    <div class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</a>
+
+<section class="page-header">
+    <h1>Search International Flights</h1>
+    <p>Find flights from 12,000+ airports worldwide</p>
+</section>
+
+<section class="flight-search-section">
+    <div class="container">
+        <div class="flight-search-card">
+            <h2>Flight Search</h2>
+            <div class="search-form">
+                <div class="form-group">
+                    <label><i class="fas fa-plane-departure"></i> From</label>
+                    <input type="text" id="from" placeholder="City, Airport, or Code" autocomplete="off">
+                    <div id="fromSuggestions" class="suggestions"></div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-plane-arrival"></i> To</label>
+                    <input type="text" id="to" placeholder="City, Airport, or Code" autocomplete="off">
+                    <div id="toSuggestions" class="suggestions"></div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Departure Date</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Passengers</label>
+                    <select id="passengers">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="searchFlights()" class="btn btn-primary search-btn">Search Flights</button>
+            <div id="dateInfo"></div>
+        </div>
+
+        <div id="flightResults"></div>
+        <div id="alternativeFlights"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Farenest Travels</h3>
+            <p>Your trusted travel partner since 2019</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels & Restaurants</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@farenesttravels.com</p>
+            <p><i class="fab fa-whatsapp"></i> +44 798 515 953</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Farenest Travels. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="airports.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
