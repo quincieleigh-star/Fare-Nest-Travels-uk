@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Farenest Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-plane-departure"></i>
+            Farenest<span>Travels</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html">Hotels & Restaurants</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<a href="https://wa.me/44798515953" class="whatsapp-float" target="_blank">
+    <div class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</a>
+
+<section class="page-header">
+    <h1>Get In Touch</h1>
+    <p>We're here to help you plan your perfect journey</p>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <h2><i class="fas fa-address-card"></i> Contact Information</h2>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@farenesttravels.com</p>
+                        <p>support@farenesttravels.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+44 798 515 953</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+44 20 1234 5678</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                        <p>Saturday: 10:00 AM - 6:00 PM</p>
+                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                        <p class="emergency">✨ 24/7 Emergency Support Available ✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inquiry-form-card">
+                <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                <form id="inquiryForm" onsubmit="return submitInquiry(event)">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="inquiryName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="inquiryEmail" required>
+                        <small>We'll never share your email</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="inquiryPhone">
+                    </div>
+                    <div class="form-group">
+                        <label>Inquiry Type *</label>
+                        <select id="inquiryType" required>
+                            <option value="">Select an option</option>
+                            <option value="flight">Flight Booking</option>
+                            <option value="hotel">Hotel/Restaurant Booking</option>
+                            <option value="package">Tour Package</option>
+                            <option value="visa">Visa Assistance</option>
+                            <option value="support">Customer Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message *</label>
+                        <textarea id="inquiryMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="inquirySuccess" class="success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Our team will contact you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Farenest Travels</h3>
+            <p>Your trusted travel partner since 2019</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels & Restaurants</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> info@farenesttravels.com</p>
+            <p><i class="fab fa-whatsapp"></i> +44 798 515 953</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Farenest Travels. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="airports.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
